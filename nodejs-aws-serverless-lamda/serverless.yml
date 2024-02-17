@@ -1,0 +1,22 @@
+service: reactiveforge-api
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-south-1
+
+functions:
+  reactiveForgeHelloFn: # this is the function name 
+    handler: hello.handler # hello is a file name , handler is a function that we are exporting
+    events:
+      - httpApi: 
+          path: /hello
+          method: GET
+  
+  reactiveForgeByeFn:
+    handler: bye.handler
+    events:
+      - httpApi:
+          path: /bye
+          method: GET
