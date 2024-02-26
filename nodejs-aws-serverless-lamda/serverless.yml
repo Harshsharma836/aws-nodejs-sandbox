@@ -7,14 +7,14 @@ provider:
   region: ap-south-1
 
 functions:
-  reactiveForgeHelloFn: # this is the function name 
+  ApexStackHelloFn: # this is the function name 
     handler: hello.handler # hello is a file name , handler is a function that we are exporting
     events:
       - httpApi: 
           path: /hello
           method: GET
   
-  reactiveForgeByeFn:
+  ApexStackByeFn:
     handler: bye.handler
     events:
       - httpApi:
