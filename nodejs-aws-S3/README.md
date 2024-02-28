@@ -52,3 +52,34 @@ AWS S3 (Simple Storage Service) is an object storage service that allows you to 
      accessKeyId: 'YOUR_ACCESS_KEY_ID',
      secretAccessKey: 'YOUR_SECRET_ACCESS_KEY',
    });
+
+## Now In AWS there is Policy :
+
+In AWS S3 policies, "Principal" refers to the AWS account, IAM user, IAM role, federated user, or AWS service to which the policy is applied. "Action" refers to the specific actions or operations that the principal is allowed or denied to perform on the S3 resources.
+
+### Example
+
+Suppose you want to create a policy that allows a specific IAM user to read objects from a particular S3 bucket named "example-bucket". Here's a simplified policy explaining the "Principal" and "Action":
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::123456789012:user/example-user"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::example-bucket/*"
+        }
+    ]
+}
+```
+### Explanation
+1. Effect: "Allow" indicates that the specified actions are allowed.
+2. Principal: Specifies the IAM user (arn:aws:iam::123456789012:user/example-user) to which the policy applies.
+3. Action: The action s3:GetObject allows the IAM user to retrieve (read) objects from the S3 bucket.
+4. Resource: Defines the specific S3 resource to which the policy applies, in this case, the objects within the bucket "example-bucket".
+
+![Screenshot (173)](https://github.com/Harshsharma836/aws-nodejs-sandbox/assets/70514943/7b6d7140-f51a-4b43-ae73-35a80290bee6)
