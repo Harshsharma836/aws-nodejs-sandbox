@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-aws-s3",
+  "version": "1.0.0",
+  "description": "AWS S3 (Simple Storage Service) is an object storage service that allows you to store and retrieve large amounts of data. This guide will walk you through setting up S3 with Node.js, including creating an IAM user, configuring permissions, and interacting with S3 buckets using the AWS SDK for Node.js.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.523.0",
+    "@aws-sdk/s3-request-presigner": "^3.523.0",
+    "dotenv": "^16.4.5"
+  }
+}
