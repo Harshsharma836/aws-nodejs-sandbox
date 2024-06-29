@@ -19,8 +19,8 @@ const sendMessage = async (messageBody) => {
 
 const message = {
   id: '1',
-  name: 'John Doe',
-  email: 'john.doe@example.com',
+  name: 'Harsh',
+  email: 'harsh@example.com',
 };
 
 sendMessage(message);
